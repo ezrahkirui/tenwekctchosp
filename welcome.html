@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Note</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: auto; /* Allow the body to expand */
+            min-height: 100vh; /* Ensure the body is at least the height of the screen */
+            overflow-x: hidden; /* Remove horizontal scrolling */
+            overflow-y: scroll; /* Enable vertical scrolling */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Start from the top */
+            align-items: center;
+            background-image: url('C:/Users/colli/OneDrive/Documents/Desktop/tnwk.jpg'); /* Fixed path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* The wrapper for the moving note */
+        .moving-note-wrapper {
+            width: 100%;
+            overflow: hidden; /* Hide the overflow so the note doesn't show outside */
+            white-space: nowrap; /* Prevent wrapping of the text */
+            position: relative;
+        }
+
+        /* The moving note itself */
+        .moving-note {
+            font-size: 100px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            background-color: transparent;
+            display: inline-block; /* Display inline for proper animation */
+            animation: moveNote 100s linear infinite;
+        }
+
+        @keyframes moveNote {
+            0% {
+                transform: translateX(70%); /* Start from the right side off the screen */
+            }
+            100% {
+                transform: translateX(-100%); /* Move to the left side off the screen */
+            }
+        }
+
+        /* Static note below the moving note */
+        .static-note {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            max-width: 90%;
+            padding: 10px;
+            margin-top: 20px; /* Reduced margin-top to bring it closer to the scrollable content */
+        }
+
+        .image-container {
+            margin-top: 50px; /* Space the image below the static note */
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 250px;
+        }
+
+        /* New note below the image */
+        .cardiothoracic-note {
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            max-width: 90%;
+            padding: 10px;
+            margin-top: 30px; /* Space the note below the image */
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Wrapper for the moving note -->
+    <div class="moving-note-wrapper">
+        <div class="moving-note">
+            AGC Tenwek Hospital Cardiothoracic Centre.
+        </div>
+    </div>
+
+    <div class="static-note">
+        AGC Tenwek Hospital in Bomet County, Kenya, established in 1937, is a 361-bed teaching and referral hospital offering surgical, medical, maternity, and pediatric services. It is Kenya's largest Mission Hospital.
+    </div>
+
+    <!-- Image section -->
+    <div class="image-container">
+        <!-- Add the path to your image on the desktop here -->
+        <img src="C:/Users/colli/OneDrive/Documents/Desktop/tenwekhosp.jpeg" alt="AGC Tenwek Hospital Image">
+    </div>
+
+    <!-- New note below the image -->
+    <div class="cardiothoracic-note">
+        Cardiothoracic Heart Hospital at Tenwek Hospital in Kenya, a leading heart health innovator for sub-Saharan Africa. The facility includes advanced surgical and patient care spaces, educational areas for specialized medical training, and sustainable features like solar panels and rainwater reuse. Designed for resiliency and future growth, the hospital enhances critical care access for the region.
+Construction recently concluded at one of HFG’s most impactful projects, a 390,000 SF Cardiothoracic Heart Hospital at Tenwek Hospital in Bomet, Kenya, one of Africa’s leading innovators in heart health for more than 8 surrounding countries in sub-Saharan Africa. The facility features 5 cardiothoracic ORs, 1 hybrid OR/catheter lab, 1 catheter lab, 4 endoscopy procedure spaces, the potential for 175 patient beds across 4 floors of patient wards, and educational space for the training of cardiothoracic fellows, profusion fellows, anesthesiology fellows, and future specialized cardiothoracic nurses.
+HFG led efforts in medical planning, schematic design, design development, program production, and healthcare-related design. By working closely with hospital staff, using census data, and identifying anticipated goals, HFG determined a building size that could satisfy current and future needs. The data gathered during repeated site visits allowed HFG to accommodate the unique social requirements of this region and its environment.
+To increase resiliency during frequent power interruptions, the hospital features a mechanically assisted natural ventilation system (the surgical ward and many patient areas feature full humidity and temperature control) and supplemental ramps that facilitate the uninterrupted movement of patients. Other sustainable innovations include solar panels positioned on a low-slope standing seam roof, the use of hollow core concrete blocks produced on site, and the collection and reuse of rainwater for on-site laundry.  
+This project also encompasses housing for visiting fellows. These residential towers are located near the hospital and include 15 three-bedroom and 5 two-bedroom apartments. Improved water infrastructure also ensures that the entire medical campus has access to reliably clean water from a nearby river.
+    </div>
+
+</body>
+</html>
